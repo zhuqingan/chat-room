@@ -1,0 +1,21 @@
+netty:
+  port: 8090
+  bossThread: 2
+  workerThread: 2
+  keepalive: true
+  backlog: 100
+
+server:
+  port: 8089
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/chatroom?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.tianjs.chat_room.entity
+  config-location: classpath:mybatis-config.xml
