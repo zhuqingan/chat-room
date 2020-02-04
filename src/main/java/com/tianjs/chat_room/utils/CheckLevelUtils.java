@@ -3,10 +3,7 @@ package com.tianjs.chat_room.utils;
 import com.tianjs.chat_room.enums.LevelStatusEnum;
 
 /**
- * @Author:UncleCatMySelf
- * @Email：zhupeijie_java@126.com
- * @QQ:1341933031
- * @Date:Created in 11:21 2018\8\15 0015
+ * @Author:zhuqa
  */
 public class CheckLevelUtils {
 

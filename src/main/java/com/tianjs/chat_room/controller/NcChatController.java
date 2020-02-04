@@ -14,10 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.Map;
 
 /**
- * @Author:UncleCatMySelf
- * @Email：zhupeijie_java@126.com
- * @QQ:1341933031
- * @Date:Created in 14:32 2018\8\14 0014
+ * @Author:zhuqa
  */
 @Controller
 @RequestMapping("/chat")

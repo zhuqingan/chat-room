@@ -3,10 +3,7 @@ package com.tianjs.chat_room.enums;
 import lombok.Getter;
 
 /**
- * @Author:UncleCatMySelf
- * @Email：zhupeijie_java@126.com
- * @QQ:1341933031
- * @Date:Created in 10:01 2018\8\15 0015
+ * @Author:zhuqa
  */
 @Getter
 public enum LevelStatusEnum {

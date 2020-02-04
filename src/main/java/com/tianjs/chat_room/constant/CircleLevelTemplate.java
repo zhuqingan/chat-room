@@ -7,10 +7,7 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
- * @Author:UncleCatMySelf
- * @Email：zhupeijie_java@126.com
- * @QQ:1341933031
- * @Date:Created in 10:16 2018\8\15 0015
+ * @Author:zhuqa
  */
 @Component
 public class CircleLevelTemplate {

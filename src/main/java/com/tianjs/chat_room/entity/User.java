@@ -1,5 +1,8 @@
 package com.tianjs.chat_room.entity;
 
+/**
+ * @Author:zhuqa
+ */
 public class User {
     private Integer id;
 
