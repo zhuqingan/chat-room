@@ -6,13 +6,13 @@ package com.tianjs.chat_room.entity;
 public class User {
     private Integer id;
 
-    private String openId;
+    private String open_id;
 
-    private String nickName;
+    private String nick_name;
 
     private String phone;
 
-    private Integer levelId;
+    private Integer level_id;
 
     public Integer getId() {
         return id;
@@ -22,20 +22,20 @@ public class User {
         this.id = id;
     }
 
-    public String getOpenId() {
-        return openId;
+    public String getOpen_id() {
+        return open_id;
     }
 
-    public void setOpenId(String openId) {
-        this.openId = openId;
+    public void setOpen_id(String open_id) {
+        this.open_id = open_id;
     }
 
-    public String getNickName() {
-        return nickName;
+    public String getNick_name() {
+        return nick_name;
     }
 
-    public void setNickName(String nickName) {
-        this.nickName = nickName;
+    public void setNick_name(String nick_name) {
+        this.nick_name = nick_name;
     }
 
     public String getPhone() {
@@ -46,11 +46,11 @@ public class User {
         this.phone = phone;
     }
 
-    public Integer getLevel() {
-        return levelId;
+    public Integer getLevel_id() {
+        return level_id;
     }
 
-    public void setLevel(Integer level) {
-        this.levelId = level;
+    public void setLevel_id(Integer level_id) {
+        this.level_id = level_id;
     }
 }
