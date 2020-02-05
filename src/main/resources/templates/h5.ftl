@@ -24,10 +24,10 @@
         socket.onopen = function(event) {
             var ta = document.getElementById('responseText');
              ta.value = "--- 连接开启! ---";
-             var message = "hello";
+             /*var message = "hello";
              var level = document.getElementById("level");
             message = "{\"nickName\": \"hhc\",\"level\": "+level.value+",\"content\": "+message+"}";
-            socket.send(message);
+            socket.send(message);*/
         };
         socket.onclose = function(event) {
             var ta = document.getElementById('responseText');
@@ -41,7 +41,7 @@
         var level = document.getElementById('level');
         //message = level.value + message;
         // language=JSON
-        message = "{\"nickName\": \"zhuqa\",\"lelvel\": "+level.value+",\"content\": "+message+"}";
+        message = "{\"nickName\": \"zhuqa\",\"level\": "+level.value+",\"content\": "+message+"}";
         if (!window.WebSocket) {
             return;
         }

@@ -20,7 +20,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.Set;
+
+import static com.tianjs.chat_room.constant.GradeLevelTemplate.HighLevelSet;
 
 
 /**
@@ -54,7 +57,7 @@ public class TextWebSocketFrameHandler extends SimpleChannelInboundHandler<TextW
         MsgVo msgVo = gson.fromJson(text, MsgVo.class);
         //int inlevel =  Integer.parseInt(msg.text().substring(0,1));
         String realMsg =  text;
-        Set<Channel> levelSet = null;
+        Set<Channel> levelSet = new LinkedHashSet<>();
         //管理员通道
         if (msgVo!=null && msgVo.getLevel()==1){
             levelTemplate.save(msgVo.getLevel(),incoming);
@@ -62,7 +65,8 @@ public class TextWebSocketFrameHandler extends SimpleChannelInboundHandler<TextW
         }
         //个人通道
         if (msgVo.getLevel() != 1) {
-            levelSet = levelTemplate.get(1);
+            levelTemplate.save(3,incoming);
+            levelSet.addAll(HighLevelSet);
             levelSet.add(incoming);
         }
         //异步处理 级别归类存储 待定，异步存在数据慢消费（不做异步处理）
@@ -75,6 +79,8 @@ public class TextWebSocketFrameHandler extends SimpleChannelInboundHandler<TextW
             channel.writeAndFlush(new TextWebSocketFrame(CheckLevelUtils.getLevelName(msgVo.getLevel())+realMsg));
         }
         channels.add(incoming);
+        int size = channels.size();
+        System.out.println("size--- "+size);
     }
 
 
@@ -87,6 +93,7 @@ public class TextWebSocketFrameHandler extends SimpleChannelInboundHandler<TextW
     public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
         System.out.println(ctx.channel().remoteAddress());
         channels.add(ctx.channel());
+        System.out.println("handlerAdded size:---------"+channels.size());
     }
 
     @Override

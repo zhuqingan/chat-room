@@ -12,11 +12,11 @@ import java.util.Set;
 @Component
 public class GradeLevelTemplate {
 
-    private static Set<Channel> HighLevelSet = new LinkedHashSet<>();
+    public static Set<Channel> HighLevelSet = new LinkedHashSet<>();
 
-    private static Set<Channel> MediumLevelSet = new LinkedHashSet<>();
+    public static Set<Channel> MediumLevelSet = new LinkedHashSet<>();
 
-    private static Set<Channel> LowLevelSet = new LinkedHashSet<>();
+    public static Set<Channel> LowLevelSet = new LinkedHashSet<>();
 
     public synchronized void save(Integer code,Channel channel){
         switch (code){
