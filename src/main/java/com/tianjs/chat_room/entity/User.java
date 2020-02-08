@@ -1,18 +1,19 @@
 package com.tianjs.chat_room.entity;
 
-/**
- * @Author:zhuqa
- */
 public class User {
     private Integer id;
 
-    private String open_id;
+    private String openId;
 
-    private String nick_name;
+    private String nickName;
+
+    private String avatarUrl;
 
     private String phone;
 
-    private Integer level_id;
+    private Integer levelId;
+
+    private String sessionKey;
 
     public Integer getId() {
         return id;
@@ -22,20 +23,28 @@ public class User {
         this.id = id;
     }
 
-    public String getOpen_id() {
-        return open_id;
+    public String getOpenId() {
+        return openId;
     }
 
-    public void setOpen_id(String open_id) {
-        this.open_id = open_id;
+    public void setOpenId(String openId) {
+        this.openId = openId == null ? null : openId.trim();
     }
 
-    public String getNick_name() {
-        return nick_name;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setNick_name(String nick_name) {
-        this.nick_name = nick_name;
+    public void setNickName(String nickName) {
+        this.nickName = nickName == null ? null : nickName.trim();
+    }
+
+    public String getAvatarUrl() {
+        return avatarUrl;
+    }
+
+    public void setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl == null ? null : avatarUrl.trim();
     }
 
     public String getPhone() {
@@ -43,14 +52,22 @@ public class User {
     }
 
     public void setPhone(String phone) {
-        this.phone = phone;
+        this.phone = phone == null ? null : phone.trim();
     }
 
-    public Integer getLevel_id() {
-        return level_id;
+    public Integer getLevelId() {
+        return levelId;
     }
 
-    public void setLevel_id(Integer level_id) {
-        this.level_id = level_id;
+    public void setLevelId(Integer levelId) {
+        this.levelId = levelId;
+    }
+
+    public String getSessionKey() {
+        return sessionKey;
+    }
+
+    public void setSessionKey(String sessionKey) {
+        this.sessionKey = sessionKey == null ? null : sessionKey.trim();
     }
 }

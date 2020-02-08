@@ -15,7 +15,22 @@ spring:
     username: root
     password: 123456
 
+
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
   type-aliases-package: com.tianjs.chat_room.entity
   config-location: classpath:mybatis-config.xml
+
+redis:
+  hostName: 127.0.0.1
+  port: 6379
+  password:
+  timeout: 10000
+  maxIdle: 300
+  maxTotal: 1000
+  maxWaitMillis: 1000
+  minEvictableIdleTimeMillis: 300000
+  numTestsPerEvictionRun: 1024
+  timeBetweenEvictionRunsMillis: 30000
+  testOnBorrow: true
+  testWhileIdle: true

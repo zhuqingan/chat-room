@@ -28,10 +28,10 @@ public class NcChatController {
         return new ModelAndView("h5",map);
     }
 
-    @GetMapping("/user")
+    /*@GetMapping("/user")
     @ResponseBody
     public User query(@RequestParam("level") Integer level){
         User user = userMapper.selectByLevel(level);
         return user;
-    }
+    }*/
 }
